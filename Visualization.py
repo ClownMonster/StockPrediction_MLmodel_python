@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-#import matplotlib
-#matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 #import matplotlib.pyplot as plt 
 
 import plotly.express as px
@@ -70,3 +70,22 @@ def VolumeDV():
 
 
 #############################################################################################
+
+# visualizing 7day rolling mean data
+
+
+from dayrolling import mean_data
+
+def roll_Visualization():
+    mean_df = mean_data()
+
+    # fig = px.scatter(mean_df, y = 'Open',).update_traces(mode = 'lines+markers')
+    # fig = px.scatter(mean_df, y = 'Close',).update_traces(mode = 'lines+markers')
+    fig = px.scatter(mean_df, y = 'Volume').update_traces(mode = 'lines+markers')
+    # fig = px.scatter(mean_df, y = 'Low').update_traces(mode = 'lines+markers')
+    # fig = px.scatter(mean_df, y = 'High').update_traces(mode = 'lines+markers')
+    '''
+    uncomment any one of the above line to get respective visualization
+    '''
+
+    fig.show()
