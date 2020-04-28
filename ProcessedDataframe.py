@@ -15,5 +15,6 @@ def trainData():
     return df_train
 
 def testData():
-    df_test = pd.read_csv('./Datasets/Google_Stock_Price_Test.csv')
+    df_test = pd.read_csv('./Datasets/Google_Stock_Price_Test.csv', index_col='Date', parse_dates=True)
+    df_test['Volume'] = df_test['Volume'].str.replace(',', '').astype(float)
     return df_test
