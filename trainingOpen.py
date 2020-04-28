@@ -11,7 +11,7 @@ open_trainig_set = df['Open']
 import warnings
 warnings.filterwarnings('ignore')
 
-###############################################################################
+#################################################################
 
 import numpy as np 
 
