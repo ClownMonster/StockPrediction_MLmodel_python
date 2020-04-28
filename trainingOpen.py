@@ -1,6 +1,6 @@
 '''
  Data preprosessing and reshaping
- Training only the data of open col from df
+ Training only the data of open column from df
 
 '''
 # get the data and reduce to open set
